@@ -1,0 +1,9 @@
+﻿  EG.cpp
+EG.cpp(52): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
+  EG_Presentation.cpp
+  Source.cpp
+  Generating code
+  All 176 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Vulkan_Engine.vcxproj -> C:\Users\Michael Luczynski\Source\Repos\Vulkan_Engine\x64\Release\Vulkan_Engine.exe
+  Vulkan_Engine.vcxproj -> C:\Users\Michael Luczynski\Source\Repos\Vulkan_Engine\x64\Release\Vulkan_Engine.pdb (Full PDB)

@@ -1,0 +1,22 @@
+﻿Build started 8/12/2016 2:40:41 PM.
+     1>Project "C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Vulkan_Engine\Vulkan_Engine.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt EG.cpp EG_Presentation.cpp Source.cpp
+         EG.cpp
+         EG_Presentation.cpp
+         Source.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Release\Vulkan_Engine.exe" /NOLOGO /LIBPATH:F:\VulkanSDK\1.0.21.1\Bin32 "vulkan-1.lib" glfw3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Release\Vulkan_Engine.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Release\Vulkan_Engine.lib" /MACHINE:X86 /SAFESEH Release\EG.obj
+         Release\EG_Presentation.obj
+         Release\Source.obj
+         Generating code
+         179 of 179 functions (100.0%) were compiled, the rest were copied from previous compilation.
+           84 functions were new in current compilation
+           0 functions had inline decision re-evaluated but remain unchanged
+         Finished generating code
+         Vulkan_Engine.vcxproj -> C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Release\Vulkan_Engine.exe
+     1>Done Building Project "C:\Users\Michael Luczynski\documents\visual studio 2015\Projects\Vulkan_Engine\Vulkan_Engine\Vulkan_Engine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.23
