@@ -27,19 +27,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EG.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EG_Presentation.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EG_Settings.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EG_Debug.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EG_Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EG_Presentation.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EG_utils.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
