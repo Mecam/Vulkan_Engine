@@ -128,7 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EG.cpp" />
+    <ClCompile Include="EG_Engine.cpp" />
     <ClCompile Include="EG_Presentation.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
