@@ -133,7 +133,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EG.h" />
+    <ClInclude Include="EG_Engine.h" />
     <ClInclude Include="EG_Debug.h" />
     <ClInclude Include="EG_Presentation.h" />
     <ClInclude Include="EG_Settings.h" />

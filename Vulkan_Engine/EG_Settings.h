@@ -10,8 +10,8 @@ enum egDisplayModes
 class egDisplaySettings
 {
 public:
-	unsigned short windowMode = EG_WINDOW_MODE_WINDOW;
+	unsigned short mWindowMode = EG_WINDOW_MODE_WINDOW;
 	const char* windowTitle = "Window";
-	int width = 800;
-	int height = 600;
+	int mWidth = 800;
+	int mHeight = 600;
 };

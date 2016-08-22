@@ -20,7 +20,7 @@ private:
 	void setupWindow();
 	egDeleter<VkInstance> vulkanInstance{vkDestroyInstance};
 #ifdef _DEBUG
-	egDebugCallback debugCallback;
+	egDebugCallback mDebugCallback;
 #endif
-	egWindow window;
+	egWindow mWindow;
 };

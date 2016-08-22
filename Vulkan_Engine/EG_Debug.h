@@ -40,21 +40,27 @@ public:
 			                       VK_DEBUG_REPORT_PERFORMANCE_WARNING_BIT_EXT;
 
 		if (vkeCreateDebugReportCallbackEXT(*instance, &callbackCreateInfo, nullptr, &this->debugReportCallback) != VK_SUCCESS)
+		{
 			throw runtime_error("Failed to set up debug callback!");
+		}
 
-		pInstance = instance;
+		mInstance = instance;
 	}
 	
 	~egDebugCallback()
 	{
-		if(!vkeDestroyDebugReportCallbackEXT)
-			vkeDestroyDebugReportCallbackEXT = reinterpret_cast<PFN_vkDestroyDebugReportCallbackEXT>(vkGetInstanceProcAddr(*pInstance, "vkDestroyDebugReportCallbackEXT"));
-		
-		if (pInstance)
-			vkeDestroyDebugReportCallbackEXT(*pInstance, this->debugReportCallback, nullptr);
+		if (!vkeDestroyDebugReportCallbackEXT)
+		{
+			vkeDestroyDebugReportCallbackEXT = reinterpret_cast<PFN_vkDestroyDebugReportCallbackEXT>(vkGetInstanceProcAddr(*mInstance, "vkDestroyDebugReportCallbackEXT"));
+		}
+
+		if (mInstance)
+		{
+			vkeDestroyDebugReportCallbackEXT(*mInstance, this->debugReportCallback, nullptr);
+		}
 	}
 private:
 	VkDebugReportCallbackEXT debugReportCallback = VK_NULL_HANDLE;
-	VkInstance* pInstance = nullptr;
+	VkInstance* mInstance = nullptr;
 };
 #endif

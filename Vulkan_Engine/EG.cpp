@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "EG.h"
+#include "EG_Engine.h"
 
 void egEngine::run()
 {
@@ -19,7 +19,7 @@ void egEngine::init()
 
 void egEngine::mainLoop()
 {
-	while (!this->window.shouldClose())
+	while (!this->mWindow.shouldClose())
 	{
 		glfwPollEvents();
 	}
@@ -39,7 +39,9 @@ void egEngine::createVulkanInstance()
 	unsigned int glfwExtensionCount = 0;
 	const char** glfwExtensions = glfwGetRequiredInstanceExtensions(&glfwExtensionCount);
 	for (size_t i = 0; i < glfwExtensionCount; ++i)
+	{
 		instanceExtensions.push_back(glfwExtensions[i]);
+	}
 	
 #ifdef _DEBUG
 	instanceExtensions.insert(instanceExtensions.end(), debugExtensions.begin(), debugExtensions.end());
@@ -49,11 +51,11 @@ void egEngine::createVulkanInstance()
 	instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 	instanceCreateInfo.pApplicationInfo = &appInfo;
 	
-	instanceCreateInfo.enabledExtensionCount = instanceExtensions.size();
+	instanceCreateInfo.enabledExtensionCount = (uint32_t)instanceExtensions.size();
 	instanceCreateInfo.ppEnabledExtensionNames = instanceExtensions.data();
 
 #ifdef _DEBUG
-	instanceCreateInfo.enabledLayerCount = validationLayers.size();
+	instanceCreateInfo.enabledLayerCount = (uint32_t)validationLayers.size();
 	instanceCreateInfo.ppEnabledLayerNames = validationLayers.data();
 #endif
 	 
@@ -65,12 +67,12 @@ void egEngine::setupValidation()
 {
 #ifdef _DEBUG
 	loadDebugFuncs(this->vulkanInstance);
-	this->debugCallback.create(&this->vulkanInstance);
+	this->mDebugCallback.create(&this->vulkanInstance);
 #endif
 }
 
 void egEngine::setupWindow()
 {
-	this->window.createWindow();
-	this->window.createSurface(&this->vulkanInstance);
+	this->mWindow.createWindow();
+	this->mWindow.createSurface(&this->vulkanInstance);
 }

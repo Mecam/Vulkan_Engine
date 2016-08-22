@@ -17,8 +17,8 @@ public:
 	int shouldClose();
 	~egWindow();
 private:
-	GLFWwindow* windowPtr = nullptr;
-	VkSurfaceKHR windowSurface = VK_NULL_HANDLE;
-	egDisplaySettings windowSettingsCurrent;
-	VkInstance* pInstance = nullptr;
+	GLFWwindow* mWindowPtr = nullptr;
+	VkSurfaceKHR mWindowSurface = VK_NULL_HANDLE;
+	egDisplaySettings mWindowSettingsCurrent;
+	VkInstance* mInstance = nullptr;
 };

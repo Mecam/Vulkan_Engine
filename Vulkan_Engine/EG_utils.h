@@ -65,7 +65,8 @@ public:
 		return object;
 	}
 
-	T* operator &() {
+	T* operator &() 
+	{
 		return &object;
 	}
 

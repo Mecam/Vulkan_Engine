@@ -14,11 +14,11 @@ void egWindow::createWindow()
 	glfwWindowHint(GLFW_REFRESH_RATE, vidMode->refreshRate);
 
 	int width = 0, height = 0;
-	switch (this->windowSettingsCurrent.windowMode)
+	switch (this->mWindowSettingsCurrent.mWindowMode)
 	{
 	case EG_WINDOW_MODE_WINDOW:
-		width = this->windowSettingsCurrent.width;
-		height = this->windowSettingsCurrent.height;
+		width = this->mWindowSettingsCurrent.mWidth;
+		height = this->mWindowSettingsCurrent.mHeight;
 		break;
 
 	case EG_WINDOW_MODE_WINDOWED_FULLSCREEN:
@@ -29,32 +29,38 @@ void egWindow::createWindow()
 	case EG_WINDOW_MODE_FULLSCREEN:
 		break;
 	}
-	this->windowPtr = glfwCreateWindow(width, height, this->windowSettingsCurrent.windowTitle, this->windowSettingsCurrent.windowMode > 0 ? monitor : nullptr, nullptr);
+	this->mWindowPtr = glfwCreateWindow(width, height, this->mWindowSettingsCurrent.windowTitle, this->mWindowSettingsCurrent.mWindowMode > 0 ? monitor : nullptr, nullptr);
 }
 
 void egWindow::createWindow(egDisplaySettings windowSettings)
 {
-	this->windowSettingsCurrent = windowSettings;
+	this->mWindowSettingsCurrent = windowSettings;
 	this->createWindow();
 }
 
 void egWindow::createSurface(VkInstance* instance)
 {
-	if (glfwCreateWindowSurface(*instance, this->windowPtr, nullptr, &this->windowSurface) != VK_SUCCESS)
+	if (glfwCreateWindowSurface(*instance, this->mWindowPtr, nullptr, &this->mWindowSurface) != VK_SUCCESS)
+	{
 		throw runtime_error("Failed to Create Window Surface!");
-	pInstance = instance;
+	}
+	mInstance = instance;
 }
 
 int egWindow::shouldClose()
 {
-	return glfwWindowShouldClose(this->windowPtr);
+	return glfwWindowShouldClose(this->mWindowPtr);
 }
 
 egWindow::~egWindow()
 {
-	if (pInstance)
-		vkDestroySurfaceKHR(*pInstance, this->windowSurface, nullptr);
-	if (windowPtr)
-		glfwDestroyWindow(this->windowPtr);
+	if (mInstance)
+	{
+		vkDestroySurfaceKHR(*mInstance, this->mWindowSurface, nullptr);
+	}
+	if (mWindowPtr)
+	{
+		glfwDestroyWindow(this->mWindowPtr);
+	}
 }
  
