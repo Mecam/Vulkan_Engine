@@ -32,4 +32,5 @@ Preparing a release:
 	2. Integrate any new features added since the last release into the program and commit the changes to the release branch
 	3. Merge the release branch with the local master branch
 	4. Push the master branch to origin
+
 */
