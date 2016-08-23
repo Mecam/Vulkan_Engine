@@ -1,14 +1,13 @@
-﻿Build started 22-Aug-2016 7:31:16 PM.
+﻿Build started 22-Aug-2016 7:53:11 PM.
      1>Project "C:\Users\Conner\Source\Repos\Vulkan_Engine\Vulkan_Engine\Vulkan_Engine.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Conner\Source\Repos\Vulkan_Engine\\Vulkan_Engine\Include /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt EG.cpp EG_Presentation.cpp Source.cpp
-         EG_Presentation.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\Conner\Source\Repos\Vulkan_Engine\\Vulkan_Engine\Include /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt EG_Engine.cpp Source.cpp
+         EG_Engine.cpp
          Generating Code...
          Skipping... (no relevant changes detected)
          Source.cpp
-         EG.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Conner\Source\Repos\Vulkan_Engine\\Vulkan_Engine\Libs\Bin "vulkan-1.lib" glfw3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.lib" /MACHINE:X64 x64\Debug\EG.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\Conner\Source\Repos\Vulkan_Engine\\Vulkan_Engine\Libs\Bin "vulkan-1.lib" glfw3dll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.lib" /MACHINE:X64 x64\Debug\EG_Engine.obj
          x64\Debug\EG_Presentation.obj
          x64\Debug\Source.obj
          Vulkan_Engine.vcxproj -> C:\Users\Conner\Source\Repos\Vulkan_Engine\x64\Debug\Vulkan_Engine.exe
@@ -16,4 +15,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.49
+Time Elapsed 00:00:01.52

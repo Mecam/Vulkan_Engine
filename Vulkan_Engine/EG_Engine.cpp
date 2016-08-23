@@ -60,7 +60,9 @@ void egEngine::createVulkanInstance()
 #endif
 	 
 	if (vkCreateInstance(&instanceCreateInfo, nullptr, &this->vulkanInstance) != VK_SUCCESS)
+	{
 		throw runtime_error("Failed to create instance!");
+	}
 }
 
 void egEngine::setupValidation()
